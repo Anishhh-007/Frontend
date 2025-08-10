@@ -130,4 +130,4 @@ const AdminAuth = () => {
   )
 }
 
-export default Adminauth
+export default AdminAuth
