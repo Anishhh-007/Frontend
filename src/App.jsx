@@ -5,7 +5,6 @@ import Home from './pages/Home'
 import KitchenQueue from './pages/KitchenQueue'
 import Settings from './pages/Settings'
 import Analytics from './pages/Analytics'
-import AdminAuth from './pages/AdminAuth'
 import Workerauth from './pages/WorkerLogin'
 import AdminSignup from './pages/AdminSignup'
 import AdminLogin from './pages/AdminLogin'
@@ -29,7 +28,6 @@ const App = () => {
           <Route path='/kitchenqueue' element={<KitchenQueue />} />
           <Route path='/settings' element={<Settings />} />
           <Route path='/analytics' element={<Analytics />} />
-          <Route path='/auth/admin' element = {<AdminAuth />} />
           <Route path='/auth/worker' element = {<Workerauth />} />
           <Route path='/auth/admin/signup' element = {<AdminSignup />} />
           <Route path='/auth/admin/login' element = {<AdminLogin />} />
