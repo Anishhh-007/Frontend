@@ -6,12 +6,13 @@ import { useSelector } from 'react-redux'
 import { removeProfile } from '../redux/slice/AdminProfileSlice'
 import { useDispatch } from 'react-redux'
 import { removeWorker } from '../redux/slice/WorkerSlice'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
     const adminData = useSelector((store) => store.admin);
     const workerData = useSelector((store) => store.worker);
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
 
   const handleLogout = async () => {
@@ -22,6 +23,7 @@ const Navbar = () => {
         withCredentials: true
       });
       dispatch(removeProfile())
+       navigate('/auth/admin/login')
       toast.success(res.data)
     } else if (workerData && Object.keys(workerData).length > 0) {
       // Worker is logged in
@@ -29,6 +31,7 @@ const Navbar = () => {
         withCredentials: true
       });
       dispatch(removeWorker())
+      navigate('/auth/worker/login')
       toast.success(res.data)
     } else {
       toast.error("No user is logged in")
@@ -41,6 +44,7 @@ const Navbar = () => {
     return (
 
         <div className="navbar bg-zinc-900  shadow-sm">
+              <ToastContainer position="top-right" autoClose={3000} />
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -101,7 +105,7 @@ const Navbar = () => {
                 </div>
 
             </div>
-            <ToastContainer position="top-right" autoClose={3000} />
+          
         </div>
 
     )

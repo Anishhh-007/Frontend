@@ -92,8 +92,9 @@ const dispatch = useDispatch()
             </div>
 
             <div className="w-1/2 flex items-center pt-20 justify-center p-10 text-xl font-semibold">
-                this is what it is
-            </div>
+        Your orders, your way — organized, easy, done.
+        Clean history. Smooth delivery. Zero hassle.
+      </div>
 
             {/* Toast container */}
             <ToastContainer position="top-right" autoClose={3000} />

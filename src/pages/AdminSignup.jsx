@@ -26,7 +26,7 @@ const AdminSignup = () => {
         { withCredentials: true }
       )
       toast.success("Account created!")
-      navigate("/createworkers")     
+      navigate("/workersignup")     
     } catch (err) {
       toast.error(
         err.response?.data?.message || 
@@ -117,8 +117,9 @@ const AdminSignup = () => {
         </div>
       </div>
 
-      <div className="w-1/2 flex items-center pt-20 justify-center p-10 text-xl font-semibold">
-        this is what it is
+     <div className="w-1/2 flex items-center pt-20 justify-center p-10 text-xl font-semibold">
+        Your orders, your way — organized, easy, done.
+        Clean history. Smooth delivery. Zero hassle.
       </div>
 
       {/* Toast container */}
