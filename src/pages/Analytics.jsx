@@ -9,7 +9,7 @@ const Analytics = () => {
   const dispatch = useDispatch()
   const fetchAnalytics = async () => {
     try {
-      const res = await axios.get(" http://localhost:8000/admin/analytics", { withCredentials: true })
+      const res = await axios.get(" /api/admin/analytics", { withCredentials: true })
 
      
       

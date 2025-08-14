@@ -25,7 +25,7 @@ const Home = () => {
       
 
       const  res = await axios.post(
-        "http://localhost:8000/orderentry",
+        "/api/orderentry",
         {
           orderID,
           status :  status2 ? "paid" : "pending",

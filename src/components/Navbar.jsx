@@ -19,7 +19,7 @@ const Navbar = () => {
   try {
     if (adminData && Object.keys(adminData).length > 0) {
       // Admin is logged in
-      const res = await axios.get("http://localhost:8000/admin/logout", {
+      const res = await axios.get("/api/admin/logout", {
         withCredentials: true
       });
       dispatch(removeProfile())
@@ -27,7 +27,7 @@ const Navbar = () => {
       toast.success(res.data)
     } else if (workerData && Object.keys(workerData).length > 0) {
       // Worker is logged in
-      const res = await axios.get("http://localhost:8000/worker/logout", {
+      const res = await axios.get("/api/worker/logout", {
         withCredentials: true
       });
       dispatch(removeWorker())

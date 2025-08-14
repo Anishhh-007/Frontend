@@ -19,7 +19,7 @@ const Layout = () => {
   // Helper fetch functions that return the response or null
   const fetchAdmin = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/admin/profile", {
+      const res = await axios.get("/api/admin/profile", {
         withCredentials: true,
       });
       dispatch(adminProfile(res.data));
@@ -31,7 +31,7 @@ const Layout = () => {
 
   const fetchWorker = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/worker/profile", {
+      const res = await axios.get("/api/worker/profile", {
         withCredentials: true,
       });
       dispatch(workerProfile(res.data));

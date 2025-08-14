@@ -19,7 +19,7 @@ const AdminLogin = () => {
   const handelLogIn = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:8000/admin/login",
+        "/api/admin/login",
         { email, password },
         { withCredentials: true }
       )

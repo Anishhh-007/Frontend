@@ -14,7 +14,7 @@ const dispatch = useDispatch()
     const handelLogIn = async () => {
         try {
             const res = await axios.post(
-                "http://localhost:8000/workers/login", {
+                "/api/workers/login", {
                 worker_id,
                 role,
 

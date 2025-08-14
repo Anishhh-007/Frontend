@@ -10,7 +10,7 @@ const AdminProfile = () => {
 
   const handelDelWorker = async (id) => {
     try {
-      const res = await axios.post(`http://localhost:8000/workers/delete/${id}`, {}, { withCredentials: true })
+      const res = await axios.post(`/api/workers/delete/${id}`, {}, { withCredentials: true })
       console.log(res.data);
 
     } catch (error) {
@@ -22,7 +22,7 @@ const AdminProfile = () => {
 
   const fetchWorkers = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/workers/profile", { withCredentials: true })
+      const res = await axios.get("/api/workers/profile", { withCredentials: true })
       console.log(res.data);
       dispatch(addWorkerData(res.data))
 

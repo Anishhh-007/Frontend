@@ -22,7 +22,7 @@ const WorkerSignUp = () => {
         setNum2(num2 + 1)
         try {
             const res = await axios.post(
-                "http://localhost:8000/workers/signup",
+                "/api/workers/signup",
                 {
                     worker_id,
                     nickname,

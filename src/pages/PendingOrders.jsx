@@ -23,7 +23,7 @@ const Pendingorders = () => {
   const fetchOrders = async () => {
     try {
       const orders = await axios.get(
-        "http://localhost:8000/order/all",
+        "/api/order/all",
         { withCredentials: true }
       );
       dispatch(setOrders(orders.data));
@@ -38,7 +38,7 @@ const Pendingorders = () => {
     
 
     try {
-      const res = await axios.post(`http://localhost:8000/order/update/${id}`, {
+      const res = await axios.post(`/api/order/update/${id}`, {
         paymentMode
       }, {
         withCredentials: true

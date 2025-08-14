@@ -21,7 +21,7 @@ const AdminSignup = () => {
   const handelSignUp = async () => {
     try {
       const { data } = await axios.post(
-        "http://localhost:8000/admin/signup",
+        "/api/admin/signup",
         { firstName, lastName, email, password, tenant },
         { withCredentials: true }
       )
