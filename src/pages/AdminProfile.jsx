@@ -11,10 +11,10 @@ const AdminProfile = () => {
   const handelDelWorker = async (id) => {
     try {
       const res = await axios.post(`/api/workers/delete/${id}`, {}, { withCredentials: true })
-      console.log(res.data);
+    
 
     } catch (error) {
-      console.log("Worer delete garda lauda lagyo : " + error);
+      console.log(error);
 
     }
   }
@@ -23,7 +23,7 @@ const AdminProfile = () => {
   const fetchWorkers = async () => {
     try {
       const res = await axios.get("/api/workers/profile", { withCredentials: true })
-      console.log(res.data);
+ 
       dispatch(addWorkerData(res.data))
 
 
