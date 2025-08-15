@@ -54,7 +54,9 @@ const Pendingorders = () => {
   }
 
   useEffect(() => {
+     if (location.pathname.startsWith("/orders")) {
     fetchOrders();
+  }
   }, [location.pathname]); // only once on mount
 
 
