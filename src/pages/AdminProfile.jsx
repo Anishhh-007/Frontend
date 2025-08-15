@@ -37,7 +37,7 @@ const AdminProfile = () => {
     fetchWorkers()
     console.log(data);
 
-  }, [data])
+  }, [location.pathname])
 
 
   return (
