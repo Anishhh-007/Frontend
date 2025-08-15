@@ -28,6 +28,7 @@ const Home = () => {
         "/api/orderentry",
         {
           orderID,
+          portion,
           status :  status2 ? "paid" : "pending",
           totalPrice,
           items,
