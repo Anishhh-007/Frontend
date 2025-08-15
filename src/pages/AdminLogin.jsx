@@ -27,8 +27,8 @@ const AdminLogin = () => {
       dispatch(adminProfile(res.data.admin))
      
       
-
-      navigate("/")       // redirect on success
+      if(res.data) navigate("/") 
+      
     } catch (err) {
       // if your backend sends 401 for invalid credentials:
       if (err.response?.status === 404 || err.response?.status === 404) {
