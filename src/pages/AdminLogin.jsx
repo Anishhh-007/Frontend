@@ -31,7 +31,7 @@ const AdminLogin = () => {
       navigate("/")       // redirect on success
     } catch (err) {
       // if your backend sends 401 for invalid credentials:
-      if (err.response?.status === 404) {
+      if (err.response?.status === 404 || err.response?.status === 404) {
         toast.error("Invalid credentials")
       }
     }
