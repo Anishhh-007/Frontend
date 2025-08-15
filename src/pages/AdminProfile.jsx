@@ -35,7 +35,7 @@ const AdminProfile = () => {
   }
   useEffect(() => {
     fetchWorkers()
-    console.log(data);
+  
 
   }, [location.pathname])
 
