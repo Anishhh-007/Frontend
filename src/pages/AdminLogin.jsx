@@ -18,6 +18,7 @@ const AdminLogin = () => {
   
   const handelLogIn = async () => {
     try {
+      if (!email || !password) return toast.error("Fields are required")
       const res = await axios.post(
         "/api/admin/login",
         { email, password },
@@ -31,7 +32,7 @@ const AdminLogin = () => {
       
     } catch (err) {
       // if your backend sends 401 for invalid credentials:
-      if (err.response?.status === 404 || err.response?.status === 404) {
+      if (err.response?.status === 400 || err.response?.status === 404) {
         toast.error("Invalid credentials")
       }
     }
